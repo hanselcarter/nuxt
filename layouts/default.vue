@@ -1,8 +1,27 @@
 <template>
   <div>
+    <TheHeader @sidenavToggle="display = !display" />
+    <TheSideNav :show="display" @close="display = false" />
     <nuxt />
   </div>
 </template>
+
+<script>
+import TheHeader from "@/components/navigation/TheHeader";
+import TheSideNav from "@/components/navigation/TheSideNav";
+
+export default {
+  components: {
+    TheHeader,
+    TheSideNav
+  },
+  data() {
+    return {
+      display: false
+    };
+  }
+};
+</script>
 
 <style>
 html {
