@@ -3,17 +3,15 @@
     <section class="intro">
       <h1>Get the latest concert news</h1>
     </section>
-    <section class="featured-posts">
-      <PostPreview id="1" title="sometitle" previewText="lorem ipsum" />
-    </section>
+    <PostsList id="1" title="sometitle" previewText="lorem ipsum" />
   </div>
 </template>
 
 <script>
-import PostPreview from "@/components/posts/PostPreview";
+import PostsList from "@/components/posts/PostsList";
 export default {
   components: {
-    PostPreview
+    PostsList
   }
 };
 </script>
@@ -48,14 +46,5 @@ export default {
   .intro h1 {
     font-size: 2rem;
   }
-}
-
-.featured-posts {
-  display: flex;
-  padding: 20px;
-  box-sizing: border-box;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
 }
 </style>
