@@ -1,8 +1,8 @@
 <template>
   <div class="posts-page">
     <section class="posts">
-      <PostPreview id="1" title="sometitle" previewText="lorem ipsum" />
-      <PostPreview id="2" title="sometitle" previewText="lorem ipsum" />
+      <PostPreview :isAdmin="isAdmin" id="1" title="sometitle" previewText="lorem ipsum" />
+      <PostPreview :isAdmin="isAdmin" id="2" title="sometitle" previewText="lorem ipsum" />
     </section>
   </div>
 </template>
@@ -12,6 +12,12 @@ import PostPreview from "@/components/posts/PostPreview";
 export default {
   components: {
     PostPreview
+  },
+  props: {
+    isAdmin: {
+      type: Boolean,
+      default: false
+    }
   }
 };
 </script>
